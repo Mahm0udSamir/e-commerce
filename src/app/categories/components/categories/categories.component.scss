@@ -1,0 +1,24 @@
+mat-action-list{
+    width: 100%;
+}
+
+.mat-grid-list{
+    // background-image: linear-gradient(to right,  rgb(194 24 91 / 15%), rgb(74, 74, 74),)
+    background-image: linear-gradient(to right,  rgb(194 24 91), rgb(74 74 74),);
+
+
+}
+
+mat-grid-tile{
+    overflow: scroll;
+}
+
+app-grid-products, app-table-products{
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    text-align: center;
+}
+

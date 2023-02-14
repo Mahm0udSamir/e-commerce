@@ -1,0 +1,28 @@
+<mat-grid-list cols="4" rowHeight="100%">
+  <mat-grid-tile colspan="3">
+    <app-grid-products
+      *ngIf="productsFilters && !(isAdmin$ | async)"
+      [productsFilters]="productsFilters"
+    ></app-grid-products>
+
+    <app-table-products
+      *ngIf="productsFilters && (isAdmin$ | async)"
+      [categories]="categories"
+      [productsFilters]="productsFilters"
+    ></app-table-products>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" [style.background]="'#424242'">
+    <mat-action-list>
+      <button
+        mat-list-item
+        mat-button
+        color="primary"
+        *ngFor="let category of categories"
+        (click)="onChangeCategory(category); currentCategory = category"
+      >
+        {{ category }}
+      </button>
+    </mat-action-list>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,51 @@
+.es-container-conponent{
+    width: 100%;
+    height: 100%;
+
+    .ec-container{
+        width: 100%;
+        height: 80%;
+        display: grid;
+        column-gap: 2px;
+        grid-template-columns: auto auto auto;
+        
+            .ec-card {
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgb(242 228 228 / 35%);
+                transition: 0.3s;
+                max-height: 350px;
+                background: #424242;
+                color: #fffc;
+                margin-bottom: 6px;
+                border-radius: 10px;
+                img{
+                    max-height: 200px;
+                 }
+            }
+    
+            .ec-card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            
+            .ec-card-container {
+                padding: 2px 16px;
+            }
+          
+    }
+    .ec-search{
+        width: 100%;
+        margin-top: 17px;
+        display: flex;
+        justify-content: center;
+        .example-form-field {
+            width: 200px;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .ec-container{    
+            grid-template-columns:  auto;
+        }
+    }
+}
+
